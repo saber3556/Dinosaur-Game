@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinasur Game</title>
+    <style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        font-family: sans-serif;
+        box-sizing: border-box;
+    }
+    body{
+        display: grid;
+        place-items: center;
+        height: 100vh;
+    }
+    #container{
+        height: 400px;
+        width: 1200px;
+        position: relative;
+        overflow: hidden;
+    }
+#container #dino{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+    
+}
+#container #dino img{
+    width: 70px;
+    height: 70px;
+}
+.dinoActive{
+    animation: animationdino 0.5s linear infinite;
+}
+@keyframes animationdino {
+    0%,100%{
+        bottom: 28px;
+    }
+    45%,55%{
+        bottom: 160px;
+    }
+}
+#container #block{
+    width: 125px;
+    height: 80px;
+    position: absolute;
+    bottom: 20px;
+    right: -20px;
+
+}
+#container #block img{
+    width: 125px;
+    height: 80px;
+}
+.blockActive{
+    animation: blockanimation 2s linear infinite;
+}
+@keyframes blockanimation {
+    0%{
+        right: -125px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+#container #road{
+    height: 30px;
+    width: 1200px;
+    position: absolute;
+    bottom: 0px;
+}
+#container #road img{
+    height:  0px;
+    width: 2000px;
+    border-bottom: 1px solid;
+    position: absolute;
+   
+    transform: translate(10px, -9px);left: 0;
+    animation: roadanimation 1s linear infinite; 
+}
+@keyframes roadanimation {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -800px;
+    }
+}
+
+#score{
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+#heightscore{
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 0px;
+    right: 0;
+}
+#gameover{
+    font-size: 70px;
+    left: calc(50% - 181px);
+    top: calc(50% - 40px);
+    width: 362px;
+    height: 80px;
+    position: absolute;
+    color: #525252;
+}
+    </style>
+</head>
+<body>
+<div id="container">
+<div id="dino">
+    <img src="dinasur1.gif" alt="dino">
+</div>
+<div id="block">
+<img src="cuca5.png" alt="blocks">
+</div>
+<div id="road">
+    <img src="" alt="">
+    </div>
+    
+        <div id="heightscore">Height Score <b>00</b></div>
+        <div id="score">Score <b>00</b></div>
+        <div id="gameover">Game Over</div>
+</div>
+
+
+
+    <script src="projet6js.js"></script>
+</body>
+</html>
